@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stationery Inventory</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>📦 Stationery Inventory</h1>
+  <a href="/add">➕ Add New Item</a>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+    <% items.forEach(item => { %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.quantity %></td>
+        <td><%= item.category %></td>
+        <td>
+          <a href="/edit/<%= item._id %>">✏️ Edit</a> |
+          <a href="/delete/<%= item._id %>" onclick="return confirm('Delete item?')">🗑️ Delete</a>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>
