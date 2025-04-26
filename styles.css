@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    background: #f4f4f4;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table, th, td {
+    border: 1px solid #aaa;
+  }
+  
+  th, td {
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  input, button {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  
