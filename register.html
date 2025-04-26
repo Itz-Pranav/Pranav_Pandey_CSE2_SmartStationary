@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>Register - Smart Stationary System</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <h2>Register</h2>
+    <form action="/register" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" required><br><br>
+
+        <label>Register as:</label>
+        <select name="role" required>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login here</a></p>
+</body>
+</html>
